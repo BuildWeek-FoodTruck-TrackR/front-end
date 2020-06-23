@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import 'bootstrap/dist/css/bootstrap.css';
+
 import './index.css';
 
 import { Provider } from 'react-redux';
@@ -11,6 +13,7 @@ import PrivateRoute from './routes/PrivateRoute';
 
 import App from './App';
 import LoginForm from './Components/LoginForm';
+import SignupForm from './Components/SignupForm';
 
 ReactDOM.render(
   <Provider store={store}>
@@ -24,6 +27,11 @@ ReactDOM.render(
           exact
           path="/login"
           component={LoginForm}
+        />
+        <Route
+          exact
+          path="/signup"
+          component={SignupForm}
         />
       </Switch>
     </Router>
