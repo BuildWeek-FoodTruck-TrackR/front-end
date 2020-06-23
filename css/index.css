@@ -251,6 +251,7 @@ button{
 }
 
 div h2{
+    font-family: 'Goblin One', cursive; 
     padding-top: 64px;
     padding-bottom: 20px;
 }
@@ -376,5 +377,6 @@ div.footerthird a:hover{
     color: white;
 
 
-
-
+.fa-instagram{
+    
+}
