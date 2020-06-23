@@ -181,6 +181,10 @@ img{
     border:6px solid  #e9b6b4
 }
 
+.img5a{
+    margin-right: 15px;
+}
+
 
 
 .chicflag{
@@ -229,6 +233,9 @@ section{
     padding:50px;
     border-bottom: solid 2px #e5e5e5;
     box-shadow: inset 0px -8px 0px 0px #fff, inset  0px -10px 0px 0px #e5e5e5; 
+}
+section#header{
+    margin-top: 30px;
 } 
 .atags:hover{
     color:#555;
@@ -283,8 +290,10 @@ div.row{
     display:flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-    width:100%;
+    width:98%;
     background-color: white;
+    padding: 1em;
+
 
 }
 div.col2{
@@ -301,7 +310,6 @@ div.col1{
     padding: 70px 0;
     box-sizing: border-box;
     background-color:rgb(240, 240green, 240blue) ;
-    border-top: 2px solid black;
     text-align: center;
 }
 
@@ -333,7 +341,6 @@ div.col1{
 }
 
 .footerthird a{
-    font-size: 1rem;
     display: block;
     width: 100%;
     margin-bottom:20px;
@@ -342,7 +349,7 @@ div.col1{
 .footerthird a{
     display: inline-block;
     padding: 0 5px;
-    font-size: 20px;
+    font-size: 1rem;
 }
 
 .fa:hover {
