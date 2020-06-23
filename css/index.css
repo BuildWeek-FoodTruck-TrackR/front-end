@@ -98,12 +98,13 @@ body{
     font-weight: 300;
     font-size:13.6px;
     background-color: var(--background-color);
+    margin:0;
 }
 
 h1{
     font-family: 'Noto Sans', sans-serif;
     color: var(--secondary-color);
-    font-size: 40px; 
+    font-size: 3rem; 
     font-weight: 700;
     text-shadow: 0.05em 0.075em 0 rgba(0,0,0, 0.1) ;
     letter-spacing: 13px;
@@ -113,18 +114,29 @@ h1{
 h2{
     font-family:font-family: 'Krona One', sans-serif; 
     font-size: 1.65em;
-    font-weight: 400;
-    letter-spacing: 4px;
+    font-weight: 800;
+    letter-spacing: 40px;
     margin: 0 0 1.5em 0;
-    line-height: 1.75em;
     text-transform: uppercase;
-    color: #888;
+    color: #d98989;
+
+}
+
+header h2 a{
+    letter-spacing: 20px;
 
 }
 
 h3{
     padding: 30px;
-    font-size:1.5rem;
+    font-size:1rem;
+}
+
+.desc{
+    color:#E9b4ad;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    font-size: 1.5rem;
 }
 div.container p {
     font: 1.5 "font-family: 'Krona One', sans-serif;"
@@ -148,6 +160,7 @@ p{
     font-size: 0.85em;
     letter-spacing: 3px;
     text-align: center;
+
 }
 .para{
     font-stretch: 100%;
@@ -161,13 +174,26 @@ a{
 img{
     width: 300px;
     height: 300px;
+    max-width: 100%;
+
 }
+#img1, #img2, #img3{
+    border:6px solid  #e9b6b4
+}
+
+.img5a{
+    margin-right: 15px;
+}
+
+
+
 .chicflag{
     width: 600px;
 }
 #page-wrapper{
+    width: 95%;
     max-width: 1280px;
-    margin: auto;
+    margin: 0  auto;
     overflow: hidden;
     padding: 0 2rem;
 }
@@ -184,6 +210,7 @@ section{
     background:#fff;
     text-align: center;
     height: 600px;
+    border:6px solid  #e9b6b4;
 }
 .container{
     margin: 0 auto;
@@ -206,6 +233,9 @@ section{
     padding:50px;
     border-bottom: solid 2px #e5e5e5;
     box-shadow: inset 0px -8px 0px 0px #fff, inset  0px -10px 0px 0px #e5e5e5; 
+}
+section#header{
+    margin-top: 30px;
 } 
 .atags:hover{
     color:#555;
@@ -217,18 +247,25 @@ section{
 
 div h2{
     padding-top: 64px;
-    padding-bottom: 64px;
+    padding-bottom: 20px;
+}
+
+div.col h2 p{
+    font-size: 1rem;
+    font-stretch: 0%;
+    letter-spacing: 0px;
+
 }
 
 .container-2{
 display:flex;
 flex-direction: row;
-justify-content: space-evenly;
+justify-content: space-between;
 align-items: center;
 max-width: 1200px;
-margin: auto;
 background: #f2f2f2;
 overflow: auto;
+margin: 0;
 }
 .container3{
     background-image: url(https://images.unsplash.com/photo-1505870448719-02104776482b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
@@ -237,6 +274,7 @@ overflow: auto;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    border:6px solid  #e9b6b4;
 }
 .container3-txt{
     text-align: center;
@@ -247,5 +285,91 @@ overflow: auto;
 
 
 }
+
+div.row{
+    display:flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width:98%;
+    background-color: white;
+    padding: 1em;
+
+
+}
+div.col2{
+    width: 33%;
+}
+div.col1{
+    width:33%;
+}
+
+.footer{
+    width:100vw;
+    display:block;
+    overflow:hidden;
+    padding: 70px 0;
+    box-sizing: border-box;
+    background-color:rgb(240, 240green, 240blue) ;
+    text-align: center;
+}
+
+.innerfooter{
+  display:block;
+  margin:0 auto;  
+  width: 1140;
+  height: 100%;
+}
+.footerthird{;
+    width: calc(21.6666666667% - 20px);
+    margin-right: 10px;
+    float: left;
+    height:100%;
+}
+
+.footerthird:last-child{
+    margin-right:0;
+}
+
+.footerthird h1{
+    font-size: 1.5rem;
+    text-shadow: 0;
+    letter-spacing: 0;
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+
+}
+
+.footerthird a{
+    display: block;
+    width: 100%;
+    margin-bottom:20px;
+
+}
+.footerthird a{
+    display: inline-block;
+    padding: 0 5px;
+    font-size: 1rem;
+}
+
+.fa:hover {
+    opacity: 0.7;
+  }
+
+
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+  }
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+
+
 
 
