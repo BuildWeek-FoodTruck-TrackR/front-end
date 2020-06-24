@@ -1,14 +1,31 @@
 import React from 'react';
-import './App.css';
-import LoginForm from "./Components/LoginForm";
-import SignUpForm from "./Components/SignUpForm";
+
+// import dependency components
+import { Switch, Route } from 'react-router-dom';
+import { Container, Row, Col } from 'reactstrap';
+
+// import app components
+import NavigationBar from './Components/_shared/NavigationBar';
+import LoginForm from './Components/LoginForm';
 
 function App() {
   return (
-    <div className="App">
-      <LoginForm  />
-      {/* <SignUpForm /> */}
-    </div>
+    <Container>
+      <Row>
+        <Col>
+          <NavigationBar />
+        </Col>
+      </Row>
+
+      <Switch>
+        <Route
+          exact
+          path="/login"
+          component={LoginForm}
+        />
+      </Switch>
+
+    </Container>
   );
 }
 
