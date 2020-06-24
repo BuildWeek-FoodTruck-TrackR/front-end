@@ -1,5 +1,11 @@
 import { combineReducers } from 'redux';
 
-const rootReducer = combineReducers({});
+import truckList from './truckList';
+import user from './user';
+
+const rootReducer = combineReducers({
+  user,
+  truckList
+});
 
 export default rootReducer;
