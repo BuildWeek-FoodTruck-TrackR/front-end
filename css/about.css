@@ -74,12 +74,22 @@ body{
     text-decoration: none;
 }
 
+.section{
+padding:20px 0;
+}
+
+.section-b{
+    background: #333;
+    color:gray;
+}
+
 @media(max-width:960px){
     .container{
         padding-right: 3rem;
         padding-left: 3rem;
     }
 }
+
 
 
 
