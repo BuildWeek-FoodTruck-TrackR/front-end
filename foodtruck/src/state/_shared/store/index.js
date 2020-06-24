@@ -3,11 +3,10 @@ import rootReducer from '../../reducers';
 import thunk from 'redux-thunk';
 
 const initialState = {
-  trucks: [
+  truckList: [
     {
       id: 1,
-      operator: 2,
-      favDiner: 1,
+      favDinerId: [1, 3],
       imageOfTruck: "https://abc.com/a.jpg",
       cuisineType: "Mexican",
       customerRatings: [
