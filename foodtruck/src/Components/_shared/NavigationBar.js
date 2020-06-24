@@ -7,10 +7,6 @@ import {
   Nav,
   NavItem,
   NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
   NavbarText
 } from 'reactstrap';
 
@@ -30,31 +26,16 @@ const NavigationBar = (props) => {
               <NavLink href="/">Home</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/">Operator</NavLink>
+              <NavLink href="/">Trucks</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/">Diner</NavLink>
+              <NavLink href="/">Promotion</NavLink>
             </NavItem>
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
-                Options
-              </DropdownToggle>
-              <DropdownMenu right>
-                <DropdownItem>
-                  Option 1
-                </DropdownItem>
-                <DropdownItem>
-                  Option 2
-                </DropdownItem>
-                <DropdownItem divider />
-                <DropdownItem>
-                  Reset
-                </DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
+            <NavItem>
+              <NavLink href="/">About</NavLink>
+            </NavItem>
           </Nav>
-          <NavbarText>Hello Paul</NavbarText>
-          <NavLink href="/">Log Out</NavLink>
+          <NavbarText>Hello Paul | <a href="/">Log Out</a></NavbarText>
         </Collapse>
       </Navbar>
     </div>
