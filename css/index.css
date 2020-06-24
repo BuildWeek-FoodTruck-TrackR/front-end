@@ -183,6 +183,7 @@ img{
 
 .img5a{
     margin-right: 15px;
+    border:6px solid  #e9b6b4;
 }
 
 
@@ -295,7 +296,7 @@ div.row{
     display:flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-    width:98%;
+    width:97.5%;
     background-color: white;
     padding: 1em;
 
@@ -376,7 +377,110 @@ div.footerthird a:hover{
     background: #3B5998;
     color: white;
 
+}
 
-.fa-instagram{
-    
+
+
+}
+@media(max-width:980px){
+    #header > .container{
+        display:block;
+    }
+    div.heading h2{
+        font-size: 1rem;
+        letter-spacing:2rem;
+    }
+    h1#logo{
+        font-size: 2rem;
+    }
+}
+
+@media(max-width:800px){
+    #header > .container{
+        display: flex;
+        flex-direction: column;
+        font-size: 1.5rem;
+    }
+    div.header h2{
+        font-size: 1rem;
+    }
+
+
+@media(max-width:500px){
+    #header >.container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    a#tag1.atags{
+        padding: 5px;
+    }
+    a#tag2.atags{
+        padding: 5px;
+    }
+    a#tag3.atags{
+        padding: 5px;
+    }
+    a#tag4.atags{
+        padding: 5px;
+    }
+
+    div.nav-container{
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+
+    h1#logo{
+       font-size: 1.5rem; 
+    }
+
+    #header P{
+        letter-spacing: 0px;
+        font-size: .85rem;
+    }
+    div.row{
+        display:block;
+    }
+    div.heading h2{
+        font-size: 1rem;
+    letter-spacing: 2px;
+    }
+
+    div div h1{
+        font-size: 1.5rem;
+        letter-spacing: 0;
+    }
+
+    div.col1{
+        margin:auto;
+        width:60%;
+    }
+
+    div.col2{
+        margin: auto;
+        width:60%;
+    }
+
+    div.img5{
+        margin: 60px;
+    }
+
+
+    .container-2{
+        flex-direction: column;
+    }
+    body{
+        background-color: brown;
+    }
+}
+
+@media(max-width:400px){
+    div.row{
+        display:block;
+    }
+    div.header h2{
+        font-size: 1rem;
+    }
 }
