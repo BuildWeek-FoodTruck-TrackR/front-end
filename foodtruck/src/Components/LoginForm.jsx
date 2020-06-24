@@ -111,7 +111,7 @@ const LoginForm = () => {
 
 				<FormLinks>
 					<a href="#">Forgot Password</a>
-					<a href="#">Sign Up</a>
+					<a href="./signUpFormApp.js">Sign Up</a>
 				</FormLinks>
 			</Form>
 			{/* displaying our post request data */}

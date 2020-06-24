@@ -1,6 +1,8 @@
-import React, { useState } from "react"
-import axios from "axios"
-import * as yup from "yup"
+import React, { useState } from "react";
+import axios from "axios";
+import * as yup from "yup";
+import "./LoginStyles.css";
+import { FormContainer, Form, FormLinks, Button } from "../styled.js";
 
 
 const SignUpForm = () => {
@@ -33,35 +35,27 @@ const SignUpForm = () => {
     }
 
     return (
-        <div>
-            <h2>Sign Up!</h2>
-            <form onSubmit = {(e)=>{
+        <FormContainer>
+            <Form onSubmit = {(e)=>{
                 e.preventDefault()
                 submit()
             }} >
-                <label>
-                    Create Username
-                    <br/>
-                    <input type="text" name="username" value={formData.username} onChange={handleChange} />
-                </label>
-                <br/>
-                <br/>
-                <label>
-                    Create Password
-                    <br/>
-                    <input type="text" name="password" value={formData.password} onChange={handleChange} />
-                </label>
-                <br/>
-                <br/>
-                <label>
-                    Verify Password
-                    <br/>
-                    <input type="text" name="verifiedPassword" value={formData.verifiedPassword} onChange={handleChange} />
-                </label>
-                <br/>
-                <button type="submit">Create Account</button>
-            </form>
-        </div>
+                <h1>Sign Up</h1>
+                <label htmlFor="username">Username</label>
+                <input type="text" name="username" id="signUpUsername" value={formData.username} onChange={handleChange} placeholder="Please Create a Username" />
+                
+                <label htmlFor="password">Password</label>   
+                <input type="password" name="password" id="password" value={formData.password} onChange={handleChange} placeholder="Please Create a Password" />
+
+                <label htmlFor="verifiedPassword">Verify Password</label>
+                <input type="password" name="verifiedPassword" id="verifiedPassword" value={formData.verifiedPassword} onChange={handleChange} placeholder="Please Verify Your Password" />
+                
+                <Button type="submit">Create Account</Button>
+                <FormLinks>
+					<a href="../App.js">Already a Member?</a>
+				</FormLinks>
+            </Form>
+        </FormContainer>
     )
 }
 
