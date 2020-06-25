@@ -28,8 +28,10 @@ img.img2{
 
 .container-img{
 display:flex;
-justify-content: space-between;
-
+flex-direction: column;
+flex-wrap: wrap;
+justify-content: center;
+align-content: space-between;
 }
 
 .v-header{
@@ -82,6 +84,10 @@ div.fullscreen-video-wrap img{
     opacity:0.65;
 
 }
+#kevinimg{
+    width: 250px;
+    height: 250px;
+}
 
 .header-content{
     z-index:2;
@@ -122,8 +128,25 @@ section-c h2{
     padding-bottom: 0px;
     display:flex;
     justify-content: space-evenly;
+    text-align: center;
+}
+
+.section-d{
+    padding-bottom: 0px;
+    display:flex;
+    justify-content: space-evenly;
+    text-align: center;
 
 }
+.section-e{
+    padding-bottom: 0px;
+    display:flex;
+    justify-content: space-evenly;
+    text-align: center;
+
+}
+
+
 div.footer{
     background-color: crimson;
 }
@@ -177,5 +200,9 @@ div.footer{
     }
 }
 
-
+@media(max-width:500px){
+   .container-img {
+        display:none;
+    }
+}
 

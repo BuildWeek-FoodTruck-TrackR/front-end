@@ -122,6 +122,10 @@ h2{
 
 }
 
+div.heading h2{
+    line-height: 2;
+}
+
 header h2 a{
     letter-spacing: 20px;
 
