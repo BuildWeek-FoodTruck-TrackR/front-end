@@ -4,8 +4,6 @@ import TruckCardOperator from './TruckCardOperator';
 
 export default function TruckListOperator(props) {
   return <>
-    {
-      props.trucks.map(truck => <TruckCardOperator truck={truck} />)
-    }
+    {props.trucks.map(truck => <div key={truck.id}><TruckCardOperator truck={truck} /></div>)}
   </>
 }

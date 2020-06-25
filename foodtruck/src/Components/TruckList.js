@@ -8,8 +8,8 @@ export default function TruckList(props) {
 
   return <>
     { diner 
-      ? <TruckListDiner trucks={props} />
-      : <TruckListOperator trucks={props} />
+      ? <TruckListDiner trucks={props.trucks} />
+      : <TruckListOperator trucks={props.trucks} />
     }
   </>
 }
