@@ -122,6 +122,10 @@ h2{
 
 }
 
+div.heading h2{
+    line-height: 2;
+}
+
 header h2 a{
     letter-spacing: 20px;
 
@@ -381,30 +385,33 @@ div.footerthird a:hover{
 
 
 
-}
-@media(max-width:980px){
-    #header > .container{
-        display:block;
-    }
-    div.heading h2{
-        font-size: 1rem;
-        letter-spacing:2rem;
-    }
-    h1#logo{
-        font-size: 2rem;
-    }
-}
 
-@media(max-width:800px){
+@media(max-width:700px){
+    #page-wrapper{
+        width:550px;
+    }
     #header > .container{
         display: flex;
         flex-direction: column;
         font-size: 1.5rem;
     }
+    div.container-2{
+    display:flex;
+    flex-direction: column;
+    }
+
+    div.container h1#logo{
+        font-size: 2rem;
+        line-height: 2;
+    }
     div.header h2{
         font-size: 1rem;
     }
-
+    .container3-txt h1{
+        font-size: 2rem;
+        line-height: 1;
+    }
+}
 
 @media(max-width:500px){
     #header >.container{

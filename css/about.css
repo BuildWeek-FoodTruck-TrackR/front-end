@@ -11,6 +11,28 @@ body{
     color:#333;
     overflow-x: hidden;
 }
+div.logo{
+    display:flex;
+    flex-direction: row;
+    justify-content: start;
+}
+img.img2{
+    width: 100px;
+    padding-bottom: 200px;
+    
+}
+
+.galley{
+    width: 250px;
+}
+
+.container-img{
+display:flex;
+flex-direction: column;
+flex-wrap: wrap;
+justify-content: center;
+align-content: space-between;
+}
 
 .v-header{
     height: 100vh;
@@ -35,9 +57,20 @@ body{
     height:100vh;
     overflow: hidden;
 }
+div.fullscreen-video-wrap img{
+    width: 100%;
+   
+    min-height: 100%;
+}
+
 .fullscreen-video-wrap video{
     min-width: 100%;
     min-height: 100%;
+}
+
+.btn{
+    padding:5px;
+    border-radius: 12px;
 }
 
 .header-overly{
@@ -50,6 +83,10 @@ body{
     z-index:1;
     opacity:0.65;
 
+}
+#kevinimg{
+    width: 250px;
+    height: 250px;
 }
 
 .header-content{
@@ -80,8 +117,81 @@ padding:20px 0;
 
 .section-b{
     background: #333;
-    color:gray;
+    color:white
 }
+
+section-c h2{
+    text-align: center;
+}
+
+.section-c{
+    padding-bottom: 0px;
+    display:flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.section-d{
+    padding-bottom: 0px;
+    display:flex;
+    justify-content: space-evenly;
+    text-align: center;
+
+}
+.section-e{
+    padding-bottom: 0px;
+    display:flex;
+    justify-content: space-evenly;
+    text-align: center;
+
+}
+
+
+div.footer{
+    background-color: crimson;
+}
+
+.innerfooter{
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+.footerthird a{
+    color:black;
+
+}
+.footerthird{
+    display:flex;
+    flex-direction: column;
+    padding-bottom: 5px;
+}
+.footerthird h2{
+    margin-top: 0;
+}
+.lam{
+    width:100px;
+    background-color: blanchedalmond;
+
+
+}
+
+.fa {
+    padding: 5px;
+    font-size: 20px;
+    width:40px;
+    text-align: center;
+    text-decoration: none;
+  }
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+
+}
+
+
+
 
 @media(max-width:960px){
     .container{
@@ -90,10 +200,9 @@ padding:20px 0;
     }
 }
 
-
-
-
-
-
-
+@media(max-width:500px){
+   .container-img {
+        display:none;
+    }
+}
 
