@@ -3,6 +3,7 @@ import axios from "axios";
 import * as yup from "yup";
 import "./LoginStyles.css"
 import { FormContainer, Form, FormLinks, Button } from "../styled.js"
+import { Link } from 'react-router-dom';
 
 
 
@@ -111,7 +112,7 @@ const LoginForm = () => {
 
 				<FormLinks>
 					<a href="#">Forgot Password</a>
-					<a href="./signUpFormApp.js">Sign Up</a>
+					<Link to="/signup">Sign up</Link>
 				</FormLinks>
 			</Form>
 			{/* displaying our post request data */}

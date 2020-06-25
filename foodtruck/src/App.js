@@ -10,6 +10,8 @@ import LoginForm from './Components/LoginForm';
 import SignUpForm from './Components/SignUpForm';
 import TruckListContainer from './Components/TruckListContainer';
 
+import TruckList from "./Components/TruckList"
+
 function App() {
   return (
     <Container>
@@ -18,6 +20,9 @@ function App() {
           <NavigationBar />
         </Col>
       </Row>
+
+      
+
 
       <Switch>
         <Route
@@ -36,6 +41,10 @@ function App() {
           component={TruckListContainer}
         />
       </Switch>
+
+      <TruckList />
+      
+
 
     </Container>
   );
