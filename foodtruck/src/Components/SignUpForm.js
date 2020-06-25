@@ -3,6 +3,8 @@ import axios from "axios";
 import * as yup from "yup";
 import "./LoginStyles.css";
 import { FormContainer, Form, FormLinks, Button } from "../styled.js";
+import { Link } from 'react-router-dom';
+
 
 
 const SignUpForm = () => {
@@ -52,7 +54,7 @@ const SignUpForm = () => {
                 
                 <Button type="submit">Create Account</Button>
                 <FormLinks>
-					<a href="../App.js">Already a Member?</a>
+					<Link to="/login">Already a Member?</Link>
 				</FormLinks>
             </Form>
         </FormContainer>
