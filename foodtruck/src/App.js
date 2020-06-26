@@ -8,11 +8,15 @@ import { Container, Row, Col } from 'reactstrap';
 import NavigationBar from './Components/_shared/NavigationBar';
 import LoginForm from './Components/LoginForm';
 import SignUpForm from './Components/SignUpForm';
-import TruckListContainer from './Components/TruckListContainer';
+
+// import operator components
 import PrivateRoute from './routes/PrivateRoute';
 import Operators from './Components/Operators';
+import OperatorLogin from './Components/OperatorLogin';
+import OperatorSignup from './Components/OperatorSignup';
 
 import TruckList from "./Components/TruckList"
+
 
 function App() {
   return (
@@ -27,6 +31,16 @@ function App() {
         <PrivateRoute
           path="/operators"
           component={Operators}
+        />
+        <Route
+          exact
+          path="/auth/operator/login"
+          component={OperatorLogin}
+        />
+        <Route
+          exact
+          path="/auth/operator/register"
+          component={OperatorSignup}
         />
         <Route
           exact

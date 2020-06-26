@@ -1,11 +1,9 @@
 import { combineReducers } from 'redux';
 
-import truckList from './truckList';
-import user from './user';
+import operator from './operator';
 
 const rootReducer = combineReducers({
-  user,
-  truckList
+  operator
 });
 
 export default rootReducer;
