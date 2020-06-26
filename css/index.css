@@ -109,6 +109,10 @@ h1{
     text-shadow: 0.05em 0.075em 0 rgba(0,0,0, 0.1) ;
     letter-spacing: 13px;
     text-transform: uppercase;
+    line-height: 1;
+}
+div.container3-txt h1{
+    padding-bottom: 20px;
 }
 
 h2{
