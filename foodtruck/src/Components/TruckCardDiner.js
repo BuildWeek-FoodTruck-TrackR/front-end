@@ -27,12 +27,13 @@ function TruckCardDiner({ data }) {
 console.log(data, 'this is my data props for trucks', data.truckList)
 
     return (
-        <Card key={data.truckList.id}>
-            <img src={data.imageOfTruck} alt="food truck"/>
+        <Card key={data.truckList.id}> 
+        {/* data.id, imageOfTruck,cuisineType can be used here for the fake api link on my truckList component */}
+            <img src={data.truckList[0].imageOfTruck} alt="food truck"/>
             <DescriptionContainer>
-                <h5>Favorite Diner: {data.truckList.favDinerId} </h5>
-                <h5>Cuisine: {data.truckList.cuisineType} </h5>
-                <h5>Customer Rating: {data.truckList.customerRatings}</h5>
+        
+                <h5>Cuisine: {data.truckList[0].cuisineType} </h5>
+    
             </DescriptionContainer>
         </Card>
     )
