@@ -111,8 +111,9 @@ const LoginForm = () => {
 				<Button disabled={buttonDisabled}>Please Log in</Button>
 
 				<FormLinks>
-					<a href="#">Forgot Password</a>
-					<Link to="/signup">Sign up</Link>
+					
+					
+
 				</FormLinks>
 			</Form>
 			{/* displaying our post request data */}
