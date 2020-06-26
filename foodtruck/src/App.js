@@ -9,6 +9,8 @@ import NavigationBar from './Components/_shared/NavigationBar';
 import LoginForm from './Components/LoginForm';
 import SignUpForm from './Components/SignUpForm';
 import TruckListContainer from './Components/TruckListContainer';
+import PrivateRoute from './routes/PrivateRoute';
+import Operators from './Components/Operators';
 
 import TruckList from "./Components/TruckList"
 
@@ -21,10 +23,11 @@ function App() {
         </Col>
       </Row>
 
-      
-
-
       <Switch>
+        <PrivateRoute
+          path="/operators"
+          component={Operators}
+        />
         <Route
           exact
           path="/login"
@@ -37,14 +40,10 @@ function App() {
         />
         <Route
           exact
-          path="/user"
-          component={TruckListContainer}
+          path="/diner/trucks"
+          component={TruckList}
         />
       </Switch>
-
-      <TruckList />
-      
-
 
     </Container>
   );
