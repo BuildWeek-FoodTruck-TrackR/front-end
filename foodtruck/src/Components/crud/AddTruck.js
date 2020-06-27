@@ -34,8 +34,7 @@ const formSchema = Yup.object().shape({
 });
 
 const mapStateToProps = (state) => ({
-  operator_id: state.operator.operator_id,
-  trucks: state.trucks
+  operator_id: state.operator.operator_id
 })
 
 const AddTruck = (props) => {
@@ -49,9 +48,6 @@ const AddTruck = (props) => {
     current_location: "",
     open_time: ""
   };
-
-  // console.log(store.getState());
-  console.log(props)
 
   const history = useHistory();
 
@@ -84,8 +80,6 @@ const AddTruck = (props) => {
 
     handleChanges(e.target.id, value)
   }
-
-  console.log(store.getState())
 
   return <>
     <Form onSubmit={formSubmit} className="mt-5">

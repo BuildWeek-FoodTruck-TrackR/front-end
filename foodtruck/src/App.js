@@ -11,7 +11,7 @@ import SignUpForm from './Components/SignUpForm';
 
 // import operator components
 import PrivateRoute from './routes/PrivateRoute';
-import Operators from './Components/Operators';
+import ReadTrucks from './Components/crud/ReadTrucks';
 import OperatorLogin from './Components/OperatorLogin';
 import OperatorSignup from './Components/OperatorSignup';
 import AddTruck from './Components/crud/AddTruck';
@@ -32,7 +32,7 @@ function App() {
         <PrivateRoute
           exact
           path="/operators"
-          component={Operators}
+          component={ReadTrucks}
         />
         <PrivateRoute
           exact
