@@ -69,6 +69,13 @@ const OperatorLogin = (props) => {
   }
 
   return <>
+    {localStorage.getItem('token') && 
+      <Redirect to={
+        history.location.state !== undefined 
+          ? history.location.state.pathname 
+          : '/operators' } 
+      />
+    }
     <Form onSubmit={formSubmit} className="mt-5">
       <FormGroup>
         <Label for="username">Username (*)</Label>

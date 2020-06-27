@@ -14,6 +14,7 @@ import PrivateRoute from './routes/PrivateRoute';
 import Operators from './Components/Operators';
 import OperatorLogin from './Components/OperatorLogin';
 import OperatorSignup from './Components/OperatorSignup';
+import AddTruck from './Components/crud/AddTruck';
 
 import TruckList from "./Components/TruckList"
 
@@ -29,8 +30,14 @@ function App() {
 
       <Switch>
         <PrivateRoute
+          exact
           path="/operators"
           component={Operators}
+        />
+        <PrivateRoute
+          exact
+          path="/operators/trucks"
+          component={AddTruck}
         />
         <Route
           exact

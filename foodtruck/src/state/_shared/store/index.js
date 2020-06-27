@@ -8,6 +8,11 @@ const initialState = {
     username: "",
     isFetching: false,
     error: ""
+  },
+  trucks: {
+    truckOwned: [],
+    isFetching: false,
+    error: ""
   }
 }
 

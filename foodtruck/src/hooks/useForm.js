@@ -26,7 +26,7 @@ export const useForm = (initialValue, initialErrors, schema) => {
         setErrors({ ...errors, [key]: "" });
       })
       .catch(err => {
-        setErrors({...errors, [key]: err.errors[0]});
+        setErrors({ ...errors, [key]: err.errors[0]});
       });
   }
 

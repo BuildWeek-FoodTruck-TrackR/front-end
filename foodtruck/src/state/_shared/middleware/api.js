@@ -29,7 +29,7 @@ export const getData = (pathname, search, fetchAction) => dispatch => {
 export const postData = (pathname, reqBody, fetchAction) => dispatch => {
   dispatch({ type: fetchAction.FETCH_START });
   axiosWithAuth()
-    .post(pathname, reqBody)
+    .post(BASE_API_URL + pathname, reqBody)
     .then(res =>
       dispatch({ type: fetchAction.FETCH_SUCCESS, payload: res.data })
     )
