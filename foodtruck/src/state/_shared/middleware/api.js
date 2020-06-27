@@ -18,7 +18,7 @@ export const postLogin = (credentials, fetchAction, pathname) => dispatch => {
 export const getData = (pathname, search, fetchAction) => dispatch => {
   dispatch({ type: fetchAction.FETCH_START });
   axiosWithAuth()
-    .get(pathname + search)
+    .get(BASE_API_URL + pathname + search)
     .then(res =>
       dispatch({ type: fetchAction.FETCH_SUCCESS, payload: res.data })
     )
