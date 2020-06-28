@@ -52,8 +52,9 @@ const TruckList = (props) => {
             <CardBody>
               <CardText><span className="font-weight-bold">{truck.name}</span></CardText>
               <CardText>{`${truck.cuisine_type} Cousine`}</CardText>
-              <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-              <CardText>{truck.image_URL}</CardText>
+              <CardText><img src={truck.image_URL} alt={truck.current_location}/></CardText>
+              <CardText>{truck.current_location}</CardText>
+              <CardText>{`Open: ${truck.open_time}`}</CardText>
               <Link to="#" className="mr-4" onClick={e => {
                 e.preventDefault();
                 props.activePage({ name: VisiblePages.EDIT_TRUCK, truckId: truck.id })
