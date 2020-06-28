@@ -1,4 +1,5 @@
-import { PostTruck, GetAllTrucks } from '../actions/crudActions';
+import { PostTruck, GetAllTrucks, RemoveTruck, UpdateTruck } from '../actions/crudActions';
+import { VisiblePages } from '../actions/visibility';
 
 const trucks = (state = {}, action) => {
 
@@ -14,7 +15,7 @@ const trucks = (state = {}, action) => {
     case PostTruck.FETCH_SUCCESS:
       return {
         ...state,
-        truckOwned: [...state.truckOwned, action.payload],
+        visiblePage: VisiblePages.TRUCK_OWNED,
         isFetching: false,
         error: ''
       };
@@ -45,6 +46,56 @@ const trucks = (state = {}, action) => {
         error: action.payload,
         isFetching: false
       };
+
+    // delete truck at api
+    case RemoveTruck.FETCH_START:
+      return {
+        ...state,
+        isFetching: true,
+        error: ''
+      };
+    case RemoveTruck.FETCH_SUCCESS:
+      return {
+        ...state,
+        visiblePage: VisiblePages.TRUCK_OWNED,
+        isFetching: false,
+        error: ''
+      };
+    case RemoveTruck.FETCH_FAIL:
+      return {
+        ...state,
+        error: action.payload,
+        isFetching: false
+      };
+
+    // put truck to api
+    case UpdateTruck.FETCH_START:
+      return {
+        ...state,
+        isFetching: true,
+        error: ''
+      };
+    case UpdateTruck.FETCH_SUCCESS:
+      return {
+        ...state,
+        visiblePage: VisiblePages.TRUCK_OWNED,
+        isFetching: false,
+        error: ''
+      };
+    case UpdateTruck.FETCH_FAIL:
+      return {
+        ...state,
+        error: action.payload,
+        isFetching: false
+      };
+    
+    // show page
+    case 'SET_PAGE':
+      return {
+        ...state,
+        visiblePage: action.payload.name,
+        activeTruck: action.payload.truckId
+      }
     
     // default state if there is no action type
     default:

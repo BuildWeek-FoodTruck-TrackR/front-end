@@ -3,9 +3,12 @@ import React from 'react';
 // import hooks
 import { useEffect } from 'react';
 
+// import routes
+import { Link } from 'react-router-dom';
+
 import {
-  Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle, Button
+  Card, CardImg, CardText, CardBody, CardLink,
+  CardTitle, CardSubtitle
 } from 'reactstrap';
 
 // import redux components
@@ -27,17 +30,22 @@ const ReadTrucks = (props) => {
 
   return <>
     { props.truckOwned.length > 0 &&
-      props.truckOwned.map(truck => <div key={truck.id}>
-        <Card>
-          <CardImg top width="100%" src={truck.image_URL} alt="Card image cap" />
-          <CardBody>
-            <CardTitle>{truck.name}</CardTitle>
-            <CardSubtitle>{truck.cuisine_type}</CardSubtitle>
-            <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-            <Button>Button</Button>
-          </CardBody>
-        </Card>
-      </div> )
+      props.truckOwned.map(truck => 
+        <div key={truck.id}>
+          <Card>
+            <CardBody>
+              <CardTitle>{truck.name}</CardTitle>
+              <CardSubtitle>{`${truck.cuisine_type} Cousine`}</CardSubtitle>
+            </CardBody>
+              <img width="100%" src="/assets/318x180.svg" alt="Card image cap" />
+            <CardBody>
+              <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
+              <Link to="#" className="mr-4">Edit</Link>
+              <Link to={`/operators/${props.operator_id}/trucks/${truck.id}`}>Remove</Link>
+            </CardBody>
+          </Card>
+        </div> 
+      )
     }
   </>
 } 

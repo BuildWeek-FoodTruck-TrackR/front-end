@@ -18,12 +18,12 @@ const NavigationBar = (props) => {
   return (
     <div>
       <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">FoodTrucks</NavbarBrand>
+        <NavbarBrand href="/">CHICAGO FOOD TRUCKS</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="/">Home</NavLink>
+              <NavLink href="https://foodtruckaf.netlify.app/">Home</NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="/user">Trucks</NavLink>

@@ -37,10 +37,10 @@ export const postData = (pathname, reqBody, fetchAction) => dispatch => {
 };
 
 // PATCH action
-export const patchData = (pathname, reqBody, fetchAction) => dispatch => {
+export const putData = (pathname, reqBody, fetchAction) => dispatch => {
   dispatch({ type: fetchAction.FETCH_START });
   axiosWithAuth()
-    .patch(pathname, reqBody)
+    .put(BASE_API_URL + pathname, reqBody)
     .then(res =>
       dispatch({ type: fetchAction.FETCH_SUCCESS, payload: res.data })
     )
@@ -48,10 +48,10 @@ export const patchData = (pathname, reqBody, fetchAction) => dispatch => {
 };
 
 // DELETE action
-export const deleteData = (pathname, reqBody, fetchAction) => dispatch => {
+export const deleteData = (pathname, fetchAction) => dispatch => {
   dispatch({ type: fetchAction.FETCH_START });
   axiosWithAuth()
-    .delete(pathname, reqBody)
+    .delete(BASE_API_URL + pathname)
     .then(res =>
       dispatch({ type: fetchAction.FETCH_SUCCESS, payload: res.data })
     )
