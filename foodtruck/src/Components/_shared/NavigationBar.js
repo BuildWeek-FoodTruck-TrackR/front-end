@@ -10,7 +10,20 @@ import {
   NavbarText
 } from 'reactstrap';
 
+import { useLocation, Link } from 'react-router-dom';
+
 const NavigationBar = (props) => {
+
+  const location = useLocation();
+
+  let href = "";
+
+  if (location.pathname === "/auth/operator/login") {
+    href = "register"
+  } else if (location.pathname === "/login") {
+    href = "signup"
+  }
+
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
@@ -35,7 +48,9 @@ const NavigationBar = (props) => {
               <NavLink href="/">About</NavLink>
             </NavItem>
           </Nav>
-          <NavbarText>Hello Paul | <a href="/">Log Out</a></NavbarText>
+          { href !== "" &&
+            <NavbarText><Link to={href}>Sign Up</Link></NavbarText>
+          }
         </Collapse>
       </Navbar>
     </div>

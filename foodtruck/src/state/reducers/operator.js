@@ -24,6 +24,12 @@ const operator = (state = {}, action) => {
         error: action.payload,
         isFetching: false
       };
+
+    case 'SET_ID':
+      return {
+        ...state,
+        operator_id: localStorage.getItem('operator_id')
+      };
     
     // default state if there is no action type
     default:

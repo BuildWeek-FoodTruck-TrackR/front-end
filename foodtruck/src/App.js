@@ -11,11 +11,8 @@ import SignUpForm from './Components/SignUpForm';
 
 // import operator components
 import PrivateRoute from './routes/PrivateRoute';
-import ReadTrucks from './Components/crud/ReadTrucks';
 import OperatorLogin from './Components/OperatorLogin';
 import OperatorSignup from './Components/OperatorSignup';
-import AddTruck from './Components/crud/AddTruck';
-import DeleteTruck from './Components/crud/DeleleTruck';
 
 import TruckList from "./Components/TruckList"
 
@@ -30,21 +27,7 @@ function App() {
       </Row>
 
       <Switch>
-        <PrivateRoute
-          exact
-          path="/operators"
-          component={ReadTrucks}
-        />
-        <PrivateRoute
-          exact
-          path="/operators/trucks"
-          component={AddTruck}
-        />
-        <PrivateRoute
-          exact
-          path="/operators/:id/trucks/:truck_id"
-          component={DeleteTruck}
-        />
+        
         <Route
           exact
           path="/auth/operator/login"
