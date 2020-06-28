@@ -8,14 +8,25 @@ import './index.css';
 import { Provider } from 'react-redux';
 import { store } from './state/_shared/store';
 
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import PrivateRoute from './routes/PrivateRoute';
 
 import App from './App';
+import Operators from './operator/Operators';
 
 ReactDOM.render(
   <Provider store={store}>
     <Router>
-      <App />
+      <Switch>
+        <PrivateRoute
+          path="/operators"
+          component={Operators}
+        />
+        <Route
+          path="/"
+          component={App}
+        />
+      </Switch>
     </Router>
   </Provider>,
   document.getElementById('root')

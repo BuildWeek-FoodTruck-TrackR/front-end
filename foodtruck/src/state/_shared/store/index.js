@@ -11,8 +11,11 @@ const initialState = {
   },
   trucks: {
     truckOwned: [],
+    isSuccess: {},
     isFetching: false,
-    error: ""
+    error: "",
+    visiblePage: 'Truck Owned',
+    activeTruck: ""
   }
 }
 
