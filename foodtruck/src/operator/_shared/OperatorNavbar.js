@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 import {
   Collapse,
@@ -18,6 +18,16 @@ import {
 } from 'reactstrap';
 
 const OperatorNavbar = (props) => {
+
+  const history = useHistory();
+
+  const handleLogout = e => {
+    e.preventDefault();
+    props.operatorLogout();
+    localStorage.clear();
+    history.push('auth/operator/login');
+  }
+
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
@@ -41,7 +51,7 @@ const OperatorNavbar = (props) => {
                   Edit
                 </DropdownItem>
                 <DropdownItem divider />
-                <DropdownItem>
+                <DropdownItem onClick={handleLogout}>
                   Logout
                 </DropdownItem>
               </DropdownMenu>
